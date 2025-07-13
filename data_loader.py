@@ -1,0 +1,19 @@
+import os
+import json
+
+def load_dataset():
+    captions = {
+        "image1.jpg": "A man riding a horse",
+        "image2.jpg": "A dog playing with a ball",
+        "image3.jpg": "A group of people in a meeting room",
+        "image4.jpg": "A sunset over the mountains",
+        "image5.jpg": "Children playing in a park",
+        "image6.jpg": "A bowl of fresh fruit on the table",
+        "image7.jpg": "A man working on a laptop at a cafe",
+        "image8.jpg": "A woman cooking in the kitchen",
+        "image9.jpg": "People walking on a busy street",
+        "image10.jpg": "A plane flying through the sky"
+    }
+    os.makedirs("data", exist_ok=True)
+    with open("data/captions.json", "w") as f:
+        json.dump(captions, f)
